@@ -1,0 +1,54 @@
+/*------------- Header ------------------*/
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	min-height: 8rem;
+	z-index: 10;
+	transition: all 0.8s ease 0s;
+	&._scroll {
+		min-height: 7rem;
+		background-color: rgba(255, 255, 255, 0.8);
+		& .menu__item {
+			background-color: transparent;
+			& .menu__link,
+			& .menu__arrow {
+				color: $mainColor;
+			}
+			&._active {
+				& .menu__link,
+				& .menu__arrow {
+					color: $purpleColor;
+				}
+			}
+		}
+	}
+	// .header__container
+	&__container {
+		flex: 1 1 100%;
+	}
+	// .header__content
+	&__content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	// .header__logo
+	&__logo {
+		height: 3.6rem;
+		width: 11.5rem;
+	}
+	// .header__menu
+	&__menu {
+		display: flex;
+		align-items: center;
+		gap: 1.4rem;
+		@media (min-width: $tab) {
+			gap: 3rem;
+		}
+	}
+}
