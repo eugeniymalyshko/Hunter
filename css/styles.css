@@ -229,6 +229,14 @@ body._lock {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 12rem;
 }
 
 /*------------ Container ---------------*/
@@ -621,6 +629,10 @@ body._touch .menu__item._active .menu__sub-list {
 
 /*-------------- Main ------------------*/
 
+.main__sell {
+  position: relative;
+}
+
 /*-------------- Hero ------------------*/
 
 .hero__blur-spot {
@@ -974,12 +986,28 @@ body._touch .menu__item._active .menu__sub-list {
 
 /*------------- Sell -------------------*/
 
-.sell {
-  position: relative;
-}
-
 .sell__spot {
   display: none;
+}
+
+.sell__content {
+  position: relative;
+  max-width: 39rem;
+}
+
+.sell__titles {
+  position: absolute;
+  top: 2.8rem;
+  left: 0;
+  z-index: 50;
+}
+
+.sell__title {
+  margin-bottom: 1.6rem;
+}
+
+.sell__text {
+  margin-bottom: 1.6rem;
 }
 
 .sell__slider .item__body {
@@ -1062,7 +1090,7 @@ body._touch .menu__item._active .menu__sub-list {
   column-gap: 5.3rem;
   row-gap: 1.6rem;
   max-width: 44rem;
-  padding-bottom: 3.2rem;
+  padding: 25rem 0rem 3.2rem 0rem;
   margin-bottom: 3.2rem;
   border-bottom: 0.2rem solid #f0f3fd;
 }
@@ -1481,7 +1509,7 @@ body._touch .menu__item._active .menu__sub-list {
 }
 
 .subscribe__form {
-  max-width: 50rem;
+  max-width: 60rem;
 }
 
 .subscribe__form::before {
@@ -1523,7 +1551,7 @@ body._touch .menu__item._active .menu__sub-list {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   row-gap: 2.4rem;
-  padding-bottom: 12rem;
+  padding-bottom: 6rem;
 }
 
 .footer__column:first-child {
@@ -1671,12 +1699,8 @@ body._touch .menu__item._active .menu__sub-list {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .sell__spot {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    right: -9.4rem;
-    z-index: -1;
+  .sell__content {
+    max-width: 52.4rem;
   }
 
   .sell__slider .item__owner {
@@ -1692,6 +1716,7 @@ body._touch .menu__item._active .menu__sub-list {
     grid-template-columns: repeat(2, 1fr);
     -ms-grid-rows: (1fr)[2];
     grid-template-rows: repeat(2, 1fr);
+    padding-top: 20rem;
   }
 
   .detail__list > *:nth-child(1) {
@@ -1802,6 +1827,10 @@ body._touch .menu__item._active .menu__sub-list {
     color: #f0f3fd;
   }
 
+  .main__hero {
+    background: url("../images/hero/spot-blur.svg") 0 0 no-repeat;
+  }
+
   .subscribe__body {
     padding: 6.5rem 0;
   }
@@ -1908,6 +1937,22 @@ body._touch .menu__item._active .menu__sub-list {
     padding: 0rem 4rem;
   }
 
+  .sell__spot {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: -9.4rem;
+    z-index: -1;
+  }
+
+  .sell__titles {
+    left: 4rem;
+  }
+
+  .sell__sub-title {
+    margin-left: -4rem;
+  }
+
   .sell__slider .item__body {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1966,6 +2011,10 @@ body._touch .menu__item._active .menu__sub-list {
     align-items: center;
   }
 
+  .detail__list {
+    padding-top: 10rem;
+  }
+
   .sell .owner__phone {
     margin-left: 3.3rem;
   }
@@ -1995,7 +2044,11 @@ body._touch .menu__item._active .menu__sub-list {
 
 @media (max-width: 123em) {
   .wrapper {
-    gap: calc(40rem + -28 * ((100vw - 32rem) / 91));
+    gap: calc(5rem + 7 * ((100vw - 32rem) / 91));
+  }
+
+  .wrapper > main {
+    gap: calc(5rem + 7 * ((100vw - 32rem) / 91));
   }
 
   .title_h1 {
@@ -2067,7 +2120,7 @@ body._touch .menu__item._active .menu__sub-list {
   }
 
   .sell__slider .item__body {
-    gap: calc(2rem + 12.8 * ((100vw - 32rem) / 91));
+    gap: calc(1rem + 13.8 * ((100vw - 32rem) / 91));
   }
 
   .sell__slider .item__image {
@@ -2119,7 +2172,7 @@ body._touch .menu__item._active .menu__sub-list {
   }
 
   .subscribe__form {
-    max-width: calc(29rem + 21 * ((100vw - 32rem) / 91));
+    max-width: calc(29rem + 31 * ((100vw - 32rem) / 91));
   }
 
   .subscribe .form__input {
@@ -2131,7 +2184,7 @@ body._touch .menu__item._active .menu__sub-list {
   }
 
   .footer__content {
-    padding-bottom: calc(1.8rem + 10.2 * ((100vw - 32rem) / 91));
+    padding-bottom: calc(1.8rem + 4.2 * ((100vw - 32rem) / 91));
   }
 
   .footer__text {
