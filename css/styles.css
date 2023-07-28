@@ -672,6 +672,7 @@ body._touch .menu__item._active .menu__sub-list {
   justify-content: center;
   max-width: 50rem;
   gap: 3.2rem;
+  padding: 2rem 0rem;
 }
 
 .hero__title {
@@ -742,7 +743,7 @@ body._touch .menu__item._active .menu__sub-list {
 
 .partners__title {
   color: #888b97;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
 .partners__logos {
@@ -1008,6 +1009,7 @@ body._touch .menu__item._active .menu__sub-list {
 
 .sell__text {
   margin-bottom: 1.6rem;
+  line-height: 150%;
 }
 
 .sell__slider .item__body {
@@ -1090,7 +1092,7 @@ body._touch .menu__item._active .menu__sub-list {
   column-gap: 5.3rem;
   row-gap: 1.6rem;
   max-width: 44rem;
-  padding: 25rem 0rem 3.2rem 0rem;
+  padding: 27rem 0rem 3.2rem 0rem;
   margin-bottom: 3.2rem;
   border-bottom: 0.2rem solid #f0f3fd;
 }
@@ -1716,7 +1718,7 @@ body._touch .menu__item._active .menu__sub-list {
     grid-template-columns: repeat(2, 1fr);
     -ms-grid-rows: (1fr)[2];
     grid-template-rows: repeat(2, 1fr);
-    padding-top: 20rem;
+    padding-top: 21rem;
   }
 
   .detail__list > *:nth-child(1) {
@@ -2100,7 +2102,7 @@ body._touch .menu__item._active .menu__sub-list {
   }
 
   .partners__title {
-    margin-bottom: calc(0.8rem + 4.2 * ((100vw - 32rem) / 91));
+    margin-bottom: calc(0.8rem + 1.2 * ((100vw - 32rem) / 91));
   }
 
   .partners__logos {
